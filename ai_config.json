@@ -1,0 +1,22 @@
+{
+  "routing": {
+    "primary": "ollama",
+    "fallback": "claude"
+  },
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "default_model": "gemma2:2b",
+    "timeout_seconds": 60
+  },
+  "claude": {
+    "default_model": "claude-haiku-4-5-20251001",
+    "api_key_env": "ANTHROPIC_API_KEY"
+  },
+  "tasks": {
+    "summarize_code":    "ollama",
+    "summarize_doc":     "ollama",
+    "extract_concepts":  "ollama",
+    "analyze_image":     "claude",
+    "complex_reasoning": "claude"
+  }
+}

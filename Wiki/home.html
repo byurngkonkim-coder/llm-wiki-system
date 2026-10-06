@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wiki Home</title>
+<style>:root{--bg:#0f172a;--surface:#1e293b;--surface2:#273449;--accent:#38bdf8;--accent2:#818cf8;--text:#e2e8f0;--muted:#94a3b8;--border:#334155;--tag:#0ea5e9;--green:#34d399;--yellow:#fbbf24;--red:#f87171;}*{box-sizing:border-box;margin:0;padding:0;}body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;min-height:100vh;}header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}header h1{font-size:18px;color:var(--accent);}.updated{font-size:12px;color:var(--muted);}.stats{display:flex;gap:12px;padding:14px 24px;background:var(--surface2);border-bottom:1px solid var(--border);flex-wrap:wrap;}.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 16px;font-size:13px;cursor:pointer;transition:border-color .2s;}.stat:hover{border-color:var(--accent);}.stat-num{font-size:22px;font-weight:700;color:var(--accent);display:block;}.stat-label{color:var(--muted);font-size:11px;}.tabs{display:flex;background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;gap:4px;overflow-x:auto;}.tab{padding:12px 16px;cursor:pointer;border-bottom:2px solid transparent;color:var(--muted);font-size:13px;white-space:nowrap;transition:all .2s;}.tab:hover{color:var(--text);}.tab.active{color:var(--accent);border-bottom-color:var(--accent);}.badge{background:var(--accent);color:#000;border-radius:10px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;}.badge-warn{background:var(--yellow);color:#000;border-radius:10px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;}.panel{display:none;padding:24px;max-width:1400px;margin:0 auto;}.panel.active{display:block;}.search-box{width:100%;padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;margin-bottom:20px;outline:none;}.search-box:focus{border-color:var(--accent);}.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer;transition:all .2s;}.card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 4px 20px rgba(56,189,248,.15);}.card-title{font-size:14px;font-weight:600;margin-bottom:6px;}.card-desc{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5;min-height:36px;}.card-tags{display:flex;gap:4px;flex-wrap:wrap;}.tag{background:rgba(14,165,233,.15);color:var(--tag);border-radius:4px;padding:2px 8px;font-size:11px;}.wiki-list{list-style:none;display:flex;flex-direction:column;gap:8px;}.list-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;}.list-item:hover{border-color:var(--accent2);}.li-name{font-size:14px;font-weight:600;min-width:200px;color:var(--accent2);}.li-desc{font-size:12px;color:var(--muted);}.logic-list{margin-top:8px;list-style:none;display:flex;flex-direction:column;gap:4px;}.logic-item{font-size:12px;color:var(--text);padding:4px 8px;background:var(--surface2);border-radius:4px;border-left:2px solid var(--accent2);}.logic-empty{font-size:11px;color:var(--muted);margin-top:8px;font-style:italic;}.log-wrap{max-width:860px;}.log-date{font-size:16px;font-weight:700;color:var(--yellow);margin:24px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--border);}.log-section{font-size:13px;font-weight:600;color:var(--accent2);margin:14px 0 6px;}.log-item{font-size:13px;color:var(--text);padding:4px 0 4px 12px;border-left:2px solid var(--border);margin-left:4px;line-height:1.6;}.log-item strong{color:var(--accent);}.log-item code{background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:11px;color:var(--green);}.log-hr{border:none;border-top:1px solid var(--border);margin:20px 0;}.log-p{font-size:13px;color:var(--muted);margin:6px 0;}.src-table{width:100%;border-collapse:collapse;font-size:13px;}.src-table th{background:var(--surface2);color:var(--muted);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap;}.src-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;}.src-table tr:hover td{background:var(--surface2);}.src-name{color:var(--accent2);font-weight:600;}.src-path{font-size:11px;color:var(--muted);font-family:monospace;max-width:380px;word-break:break-all;}.src-date{font-size:12px;color:var(--muted);white-space:nowrap;}.gtable{width:100%;border-collapse:collapse;font-size:13px;}.gtable th{background:var(--surface2);color:var(--muted);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}.gtable td{padding:10px 14px;border-bottom:1px solid var(--border);}.gtable tr:hover td{background:var(--surface2);}.rel{background:rgba(129,140,248,.2);color:var(--accent2);border-radius:4px;padding:2px 8px;font-size:11px;}.sec-title{font-size:12px;color:var(--muted);margin:0 0 14px;text-transform:uppercase;letter-spacing:.5px;}.hidden{display:none!important;}.issue-bug{background:rgba(248,113,113,.2);color:var(--red);border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;min-width:44px;text-align:center;}.issue-todo{background:rgba(251,191,36,.2);color:var(--yellow);border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;min-width:44px;text-align:center;}.ri-mtime{margin-left:auto;font-size:11px;color:var(--muted);white-space:nowrap;}</style>
+</head><body>
+<header>
+<h1>&#x1F9E0; 개발프로그램 LLM Wiki</h1>
+<span class="updated">마지막 갱신: 2026-06-24 21:36</span>
+</header>
+<div class="stats">
+<div class="stat" onclick="switchTab('projects')"><span class="stat-num">0</span><span class="stat-label">프로젝트</span></div>
+<div class="stat" onclick="switchTab('concepts')"><span class="stat-num">0</span><span class="stat-label">핵심 개념</span></div>
+<div class="stat" onclick="switchTab('entities')"><span class="stat-num">0</span><span class="stat-label">엔티티</span></div>
+<div class="stat" onclick="switchTab('topics')"><span class="stat-num">0</span><span class="stat-label">토픽</span></div>
+<div class="stat" onclick="switchTab('graph')"><span class="stat-num">0</span><span class="stat-label">연결 관계</span></div>
+<div class="stat" onclick="switchTab('sources')"><span class="stat-num">0</span><span class="stat-label">출처 추적</span></div>
+<div class="stat" onclick="switchTab('recent')"><span class="stat-num" style="color:var(--green)">0</span><span class="stat-label">최근 변경</span></div>
+<div class="stat" onclick="switchTab('issues')"><span class="stat-num" style="color:var(--green)">0</span><span class="stat-label">미해결 이슈</span></div>
+</div>
+<div class="tabs">
+<div class="tab active" id="tab-projects" onclick="switchTab('projects')">&#x1F4C1; 프로젝트<span class="badge">0</span></div>
+<div class="tab" id="tab-logic" onclick="switchTab('logic')">&#x2699; 기능/로직<span class="badge">0</span></div>
+<div class="tab" id="tab-concepts" onclick="switchTab('concepts')">&#x1F9E0; 개념<span class="badge">0</span></div>
+<div class="tab" id="tab-entities" onclick="switchTab('entities')">&#x1F527; 엔티티<span class="badge">0</span></div>
+<div class="tab" id="tab-topics" onclick="switchTab('topics')">&#x1F4CB; 토픽<span class="badge">0</span></div>
+<div class="tab" id="tab-sources" onclick="switchTab('sources')">&#x1F517; 출처 추적<span class="badge">0</span></div>
+<div class="tab" id="tab-log" onclick="switchTab('log')">&#x1F4DD; 변경 이력</div>
+<div class="tab" id="tab-graph" onclick="switchTab('graph')">&#x1F578; 지식 그래프<span class="badge">0</span></div>
+<div class="tab" id="tab-recent" onclick="switchTab('recent')">&#x1F514; 최근 변경<span class="badge" style="background:var(--green);color:#000">0</span></div>
+<div class="tab" id="tab-issues" onclick="switchTab('issues')">&#x26A0; 미해결</div>
+</div>
+<div class="panel active" id="panel-projects">
+<input class="search-box" id="search-projects" placeholder="프로젝트 검색..." oninput="filterCards('projects')">
+<div class="card-grid" id="grid-projects"></div>
+</div>
+<div class="panel" id="panel-logic">
+<p class="sec-title">각 프로젝트의 주요 기능 및 섹션</p>
+<input class="search-box" id="search-logic" placeholder="기능/섹션 검색..." oninput="filterCards('logic')">
+<div class="card-grid" id="grid-logic"></div>
+</div>
+<div class="panel" id="panel-concepts">
+<input class="search-box" id="search-concepts" placeholder="개념 검색..." oninput="filterList('concepts')">
+<ul class="wiki-list" id="list-concepts"></ul>
+</div>
+<div class="panel" id="panel-entities">
+<input class="search-box" id="search-entities" placeholder="엔티티 검색..." oninput="filterList('entities')">
+<ul class="wiki-list" id="list-entities"></ul>
+</div>
+<div class="panel" id="panel-topics">
+<input class="search-box" id="search-topics" placeholder="토픽 검색..." oninput="filterList('topics')">
+<ul class="wiki-list" id="list-topics"></ul>
+</div>
+<div class="panel" id="panel-sources">
+<p class="sec-title">모든 Wiki 파일 — 원본 소스 역추적 (클릭시 Obsidian)</p>
+<input class="search-box" id="search-sources" placeholder="파일명/출처 검색..." oninput="filterTable('sources')">
+<table class="src-table" id="table-sources"><thead><tr><th>Wiki File</th><th>Source</th><th>Created</th><th>Type</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<div class="panel" id="panel-log">
+<div style="display:flex;gap:12px;margin-bottom:20px;">
+<div class="card" onclick="openMd('hot.md')" style="flex:1;cursor:pointer;"><div class="card-title">&#x1F525; Hot — 현재 작업 메모리</div><div class="card-desc">진행 중 작업 · 다음 단계 · 미해결 이슈</div></div>
+<div class="card" onclick="openMd('log.md')" style="flex:1;cursor:pointer;"><div class="card-title">&#x1F4CB; Log — Obsidian에서 편집</div><div class="card-desc">전체 log.md를 Obsidian에서 열기</div></div>
+</div>
+<div class="log-wrap"><p class="log-p">로그는 <code>Wiki/log.md</code> 에서 직접 편집하고, wiki_refresh.bat 실행 시 홈 화면이 갱신됩니다.</p></div>
+</div>
+<div class="panel" id="panel-graph">
+<p class="sec-title">프로젝트 간 연결 관계</p>
+<table class="gtable"><thead><tr><th>Project A</th><th>Relation</th><th>Project B</th><th>Shared</th></tr></thead><tbody>
+<tr><td colspan="4" style="color:var(--muted);padding:20px;">그래프 데이터 없음 — graphify_run.py 를 실행하세요</td></tr></tbody></table>
+<div style="text-align:center;margin-top:20px;"><button onclick="window.open('GraphData/graph.html')" style="background:var(--accent);color:#000;border:none;border-radius:8px;padding:10px 24px;font-size:14px;cursor:pointer;font-weight:600;">&#x1F578; 인터랙티브 그래프 열기</button></div>
+</div>
+<div class="panel" id="panel-recent">
+<p class="sec-title">최근 7일 내 변경된 Wiki 파일 (0개)</p>
+<ul class="wiki-list" id="list-recent">
+<li style="padding:20px;color:var(--muted);font-size:13px;">최근 7일 내 변경 없음</li></ul>
+</div>
+<div class="panel" id="panel-issues">
+<p class="sec-title">미해결 이슈 — BUG / TODO 태그 (0개)</p>
+<ul class="wiki-list" id="list-issues">
+<li style="padding:20px;color:var(--green);font-size:13px;">미해결 이슈 없음 ✅</li></ul>
+</div>
+<script>function switchTab(n){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});var tab=document.getElementById('tab-'+n);var panel=document.getElementById('panel-'+n);if(tab)tab.classList.add('active');if(panel)panel.classList.add('active');}function openMd(p){var v='개발프로그램';var u='obsidian://open?vault='+encodeURIComponent(v)+'&file='+encodeURIComponent('Wiki/'+p);window.open(u,'_self');}function filterCards(t){var q=document.getElementById('search-'+t).value.toLowerCase();document.querySelectorAll('#grid-'+t+' .card').forEach(function(c){c.classList.toggle('hidden',q.length>0&&!c.innerText.toLowerCase().includes(q));});}function filterList(t){var q=document.getElementById('search-'+t).value.toLowerCase();document.querySelectorAll('#list-'+t+' .list-item').forEach(function(li){li.classList.toggle('hidden',q.length>0&&!li.innerText.toLowerCase().includes(q));});}function filterTable(t){var q=document.getElementById('search-'+t).value.toLowerCase();document.querySelectorAll('#table-'+t+' tbody tr').forEach(function(tr){tr.classList.toggle('hidden',q.length>0&&!tr.innerText.toLowerCase().includes(q));});}</script>
+</body></html>
